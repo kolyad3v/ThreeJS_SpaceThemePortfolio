@@ -1,0 +1,119 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+html,
+body {
+ background: #000000;
+}
+
+.webgl {
+ position: fixed;
+ top: 0;
+ left: 0;
+ outline: none;
+}
+
+@font-face {
+ font-family: 'minecraft';
+ src: url('../static/fonts/Minecraft.ttf');
+}
+/* .loading-bar {
+ position: absolute;
+ top: 50%;
+ width: 100%;
+ height: 10px;
+ background: #ffffff;
+ transform: scaleX(0);
+ transform-origin: top left;
+ transition: transform 0.8s;
+ will-change: transform;
+}
+
+.loading-bar.ended {
+ transform-origin: top right;
+ transition: transform 1.5s ease-in-out;
+} */
+
+.section {
+ display: flex;
+ align-items: center;
+ height: 100vh;
+ position: relative;
+ /* font-family: 'Cabin', sans-serif; */
+ color: #ffeded;
+ text-transform: uppercase;
+ font-size: 7vmin;
+ padding-left: 10%;
+ padding-right: 10%;
+ /* 
+ background-image: url('../static/textures/spaceWindowClearEditedSunGlow2.png');
+ background-size: cover;
+ background-attachment: fixed;
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+ pointer-events: none; */
+
+ z-index: 0;
+}
+
+.controls {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100vw;
+ height: fit-content;
+
+ /* background: #000; */
+ pointer-events: all;
+ cursor: pointer;
+ z-index: 3;
+
+ display: none;
+}
+
+.warning {
+ /* display: none; */
+ color: rgb(255, 0, 0);
+ animation: warning 1.5s ease-in-out 0s infinite alternate;
+ z-index: 1;
+ text-align: left;
+ position: fixed;
+ left: 10vw;
+ bottom: 25vh;
+ font-family: minecraft, monospace;
+ font-size: 4vmin;
+ /* background: #000; */
+ box-sizing: content-box;
+
+ width: 25%;
+}
+
+.hide {
+ display: none;
+}
+
+@keyframes warning {
+ from {
+  opacity: 1;
+ }
+ to {
+  opacity: 0;
+ }
+}
+section:nth-child(odd) {
+ justify-content: flex-end;
+}
+
+img {
+ transform: scale(0.2);
+ transition: transform 0.4s;
+}
+
+img:hover {
+ transform: scale(0.24);
+}
